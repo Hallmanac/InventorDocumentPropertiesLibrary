@@ -31,11 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autodesk.Inventor.Interop, Version=14.0.0.0, Culture=neutral, PublicKeyToken=d84147f8b4276564, processorArchitecture=MSIL">
+    <Reference Include="Autodesk.Inventor.Interop">
+      <HintPath>..\..\..\Autodesk.Inventor.Interop.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="InventorEvents2010">
-      <HintPath>..\..\InventorEventsLibrary\InventorEvents2010\bin\Release\InventorEvents2010.dll</HintPath>
+    <Reference Include="InventorEvents2011">
+      <HintPath>..\..\..\..\X Drive\Visual Studio Workspace\InventorEventsLibrary\InventorEvents2011\bin\Release\InventorEvents2011.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,6 +50,9 @@
     <Compile Include="IInventorDocumentIProperties.cs" />
     <Compile Include="InventorDocumentIProperties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

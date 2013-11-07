@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using Inventor;
-using InventorEvents2010;
+
 namespace InventorDocumentProperties
 {
+    using InventorEvents2011;
+
     public class InventorDocumentIProperties : IInventorDocumentIProperties 
     {
         #region Fields
@@ -40,8 +42,7 @@ namespace InventorDocumentProperties
 
                 if(inventorDocEvents == null)
                 {
-                    inventorDocEvents = new DocumentEventsLib
-                                    (value.Parent, value);
+                    inventorDocEvents = new DocumentEventsLib (value);
                     inventorDocEvents.OnChangDelegate = this.DocumentEvents_OnChange;
                     inventorDocEvents.DocumentEvents.OnChange += inventorDocEvents.OnChangDelegate;
                 }
